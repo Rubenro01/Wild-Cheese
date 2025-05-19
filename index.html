@@ -1,33 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Wild Cheese</title>
-    <link rel=stylesheet href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wild Cheese – Torneo Wild Rift 5 vs 5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+  :root{
+    --c-primary:#59D9D9;
+    --c-secondary:#8E82D9;
+    --c-accent:#F2CB6E;
+    --c-dark:#1d1d1d;
+    --c-light:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:Poppins,Arial,sans-serif;line-height:1.6;color:var(--c-dark);background:var(--c-accent);}
+  a{color:inherit;text-decoration:none;}
+  header{background:var(--c-primary);color:var(--c-light);position:sticky;top:0;z-index:1000;}
+  .nav-container{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;}
+  nav ul{display:flex;gap:1rem;list-style:none;font-weight:600;}
+  nav a:hover{opacity:.8;}
+  .hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:center;gap:2rem;max-width:1200px;margin:2rem auto;padding:0 1rem;}
+  .hero img{width:100%;border-radius:1rem;box-shadow:0 5px 15px rgba(0,0,0,.2);}
+  h1{font-size:clamp(2rem,5vw,3rem);color:var(--c-secondary);}
+  .btn{display:inline-block;padding:.75rem 1.5rem;background:var(--c-secondary);color:var(--c-light);border-radius:.5rem;font-weight:600;margin-top:1rem;transition:.2s background-color ease-in-out;}
+  .btn:hover{background:var(--c-dark);}
+  footer{background:var(--c-dark);color:var(--c-light);text-align:center;padding:1.5rem 1rem;margin-top:3rem;font-size:.875rem;}
+  /* Mobile nav */
+  @media (max-width:600px){ 
+    nav ul{flex-direction:column;background:var(--c-primary);position:absolute;top:100%;left:0;right:0;display:none;padding:1rem;}
+    header.active nav ul{display:flex;}
+    .menu-toggle{display:block;cursor:pointer;font-size:1.75rem;}
+  }
+  .menu-toggle{display:none;user-select:none;}
+  </style>
+  <script defer>
+    document.addEventListener('DOMContentLoaded',()=>{
+      const toggle=document.querySelector('.menu-toggle');
+      const header=document.querySelector('header');
+      if(toggle){
+        toggle.addEventListener('click',()=>header.classList.toggle('active'));
+      }
+    });
+  </script>
 </head>
 <body>
-    <header>
-        <h1>Wild Cheese</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="registro.html">Registro</a></li>
-                <li><a href="reglas.html">Reglas</a></li>
-                <li><a href="composiciones.html">Composiciones</a></li>
-                <li><a href="resultados.html">Resultados</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div>
-            <img src="img/bienvenida.jpeg" alt="bienvenida">
-        </div>
-        <p>Bienvenido a Wild Cheese. ¡Regístrate ahora para participar!</p>
-        <a href="registro.html">Registrarse</a>
-    </main>
-    <footer>
-        <p>Derechos de autor © 2023 Torneo de equipos</p>
-    </footer>
+  <header>
+    <div class="nav-container">
+      <h2>Wild Cheese</h2>
+      <span class="menu-toggle">☰</span>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="registro.html">Registro</a></li>
+          <li><a href="reglas.html">Reglas</a></li>
+          <li><a href="composiciones.html">Composiciones</a></li>
+          <li><a href="resultados.html">Resultados</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Torneo Wild Cheese 2025</h1>
+      <p>Evento <strong>for‑fun 5 vs 5</strong> de <em>League of Legends: Wild Rift</em> donde los equipos y composiciones se sortean de forma aleatoria. ¡Demuestra tu creatividad y tu habilidad en las situaciones más inesperadas!</p>
+      <a href="registro.html" class="btn">¡Regístrate!</a>
+    </div>
+    <img src="img/bienvenida.jpg" alt="Ilustración del torneo" loading="lazy">
+  </section>
+
+  <footer>
+    © 2025 Wild Cheese — Built with ❤ por la comunidad
+  </footer>
 </body>
 </html>
