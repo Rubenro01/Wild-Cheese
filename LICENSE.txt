@@ -1,0 +1,20 @@
+
+---
+
+## 3. Cabecera + footer reutilizables (HTML puro)
+
+```html
+<!-- _header.html -->
+<header class="site-header">
+  <div class="container">
+    <h1 class="logo">Wild Cheese</h1>
+    <button class="nav-toggle" aria-label="Menú">☰</button>
+    <nav class="site-nav" id="nav">
+      <a href="index.html">Inicio</a>
+      <a href="registro.html">Registro</a>
+      <a href="reglas.html">Reglas</a>
+      <a href="composiciones.html">Composiciones</a>
+      <a href="resultados.html">Resultados</a>
+    </nav>
+  </div>
+</header>

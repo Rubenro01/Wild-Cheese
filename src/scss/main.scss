@@ -1,0 +1,54 @@
+/* Variables de color */
+:root {
+  --primary: #59d9d9;
+  --secondary: #8e82d9;
+  --accent: #f2cb6e;
+  --dark: #1d1d1d;
+  --light: #fff;
+}
+
+/* Reset mínimo */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: var(--accent);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header { background: var(--primary); box-shadow: 0 2px 6px #0003; }
+.site-header .logo { font-size: 1.6rem; color: var(--light); }
+
+.site-nav {
+  display: flex;
+  gap: 1rem;
+  a { color: var(--light); font-weight: 600; padding: .5rem; border-radius: .25rem;
+      &:hover, &:focus { background: #0002; } }
+}
+
+/* Responsive nav */
+@media (max-width: 640px) {
+  .site-nav { 
+     position: absolute; inset: 100% 0 auto; flex-direction: column;
+     background: var(--primary); display: none; 
+  }
+  .site-nav.open { display: flex; }
+  .nav-toggle { display: block; background: none; border: none; color: var(--light);
+                font-size: 1.8rem; }
+}
+
+.hero { 
+  display: grid; gap: 2rem; margin: 2rem auto; max-width: 1100px; 
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.btn {
+  display: inline-block; background: var(--secondary); color: var(--light);
+  padding: .8rem 1.4rem; border-radius: .5rem; margin-top: 1rem;
+  &:hover { background: var(--dark); }
+}
+
+/* Footer */
+footer { background: var(--dark); color: var(--light); text-align: center; padding: 1.5rem; margin-top: 3rem; }
