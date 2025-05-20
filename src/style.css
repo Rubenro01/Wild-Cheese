@@ -1,0 +1,200 @@
+/* Utiliza una paleta de colores coherente */
+:root {
+    --color-primario: #59D9D9;
+    --color-secundario: #8E82D9;
+    --color-fondo: #F2CB6E;
+    --color-texto: #222;
+    --color-boton: #8E82D9;
+    --color-boton-hover: #59D9D9;
+    --color-boton-texto: #fff;
+    --color-enlace-hover: #F2CB6E;
+    --color-contraste: #000;
+}
+
+/* Utiliza la misma fuente en todo tu sitio web */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7d365;
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+}
+
+/* Utiliza tamaños de fuente coherentes */
+h1, h2, h3 {
+    color: var(--color-secundario);
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+main p, .bienvenida p {
+    text-align: justify;
+    font-size: 1.1rem;
+    margin: 1rem auto;
+    max-width: 700px;
+}
+
+/* Utiliza un diseño coherente */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.card {
+    background-color: var(--color-fondo);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-primario);
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.3rem;
+    transition: background 0.2s, color 0.2s;
+    outline: none;
+}
+nav a.active, nav a:focus, nav a:hover {
+    background: var(--color-enlace-hover);
+    color: var(--color-contraste);
+}
+
+.bienvenida {
+    margin-top: 4.5rem;
+    text-align: center;
+}
+
+.boton-principal {
+    display: inline-block;
+    background: var(--color-boton);
+    color: var(--color-boton-texto);
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 1.5rem 0;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-decoration: none;
+}
+.boton-principal:hover, .boton-principal:focus {
+    background: var(--color-boton-hover);
+    color: var(--color-contraste);
+    outline: 2px solid var(--color-secundario);
+}
+
+.novedades {
+    background: #fffbe6;
+    border-radius: 0.5rem;
+    margin: 2rem auto;
+    max-width: 700px;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.novedades ul {
+    padding-left: 1.2rem;
+}
+.novedades li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    border: none;
+    background: linear-gradient(to bottom right, var(--color-fondo), transparent);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+#ir-arriba {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--color-boton);
+    color: var(--color-boton-texto);
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 2000;
+    transition: background 0.2s, color 0.2s;
+}
+#ir-arriba:hover, #ir-arriba:focus {
+    background: var(--color-boton-hover);
+    color: var(--color-contraste);
+    outline: 2px solid var(--color-secundario);
+}
+
+footer {
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    padding: 1rem;
+    text-align: right;
+    background: #fffbe6;
+    color: var(--color-secundario);
+    font-size: 0.95rem;
+}
+
+/* Accesibilidad: foco visible */
+:focus {
+    outline: 2px solid var(--color-secundario);
+    outline-offset: 2px;
+}
+
+@media (max-width: 700px) {
+    .bienvenida, .novedades {
+        margin: 1rem 0.5rem;
+        padding: 1rem;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin: 0.5rem 0;
+    }
+}

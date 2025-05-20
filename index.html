@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Wild Cheese</title>
+    <link rel="stylesheet" href="src/style.css">
+    <meta name="theme-color" content="#FF8C00">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="src/favicon.svg">
+    <meta name="description" content="Torneo de equipos Wild Cheese: participa, consulta reglas, composiciones y resultados. ¡Únete a la comunidad!">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Ir al contenido principal</a>
+    <header>
+        <h1>Wild Cheese</h1>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html" class="active" aria-current="page">Inicio</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="reglas.html">Reglas</a></li>
+                <li><a href="composiciones.html">Composiciones</a></li>
+                <li><a href="resultados.html">Resultados</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-content">
+        <section class="bienvenida">
+            <div>
+                <img src="img/bienvenida.jpeg" alt="Imagen de bienvenida al torneo Wild Cheese" loading="lazy">
+            </div>
+            <h2>¡Bienvenido/a a Wild Cheese!</h2>
+            <p>Wild Cheese es el torneo de equipos más divertido y competitivo. Participa, conoce las reglas, consulta composiciones y sigue los resultados en tiempo real. ¡Forma parte de nuestra comunidad y vive la experiencia!</p>
+            <a href="registro.html" class="boton-principal" aria-label="Registrarse en el torneo">Registrarse</a>
+        </section>
+        <section class="novedades" aria-label="Novedades">
+            <h3>Últimas novedades</h3>
+            <ul>
+                <li>¡Inscripciones abiertas para la nueva edición 2025!</li>
+                <li>Consulta las <a href="reglas.html">reglas actualizadas</a> y los <a href="premios.html">premios</a>.</li>
+                <li>Revisa las <a href="composiciones.html">composiciones de equipos</a> y los <a href="resultados.html">resultados</a> en tiempo real.</li>
+            </ul>
+        </section>
+        <button id="ir-arriba" aria-label="Ir arriba" title="Ir arriba">↑</button>
+    </main>
+    <footer>
+        <p>Derechos de autor © 2023-2025 Torneo de equipos Wild Cheese</p>
+    </footer>
+    <script defer>
+    // Botón Ir arriba
+    const btnArriba = document.getElementById('ir-arriba');
+    window.addEventListener('scroll', () => {
+        btnArriba.style.display = window.scrollY > 200 ? 'block' : 'none';
+    });
+    btnArriba.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    </script>
+</body>
+</html>
