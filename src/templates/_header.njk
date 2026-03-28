@@ -1,9 +1,25 @@
-<header>
-  <div class="nav-container">
-    <h1>Wild Cheese</h1>
-    <button class="menu-toggle" aria-label="Menú"><span aria-hidden="true">☰</span></button>
-    <nav>
-      <ul>
+<header class="site-header">
+  <div class="page-shell nav-shell">
+    <a class="brand" href="index.html" aria-label="Volver al inicio de Wild Cheese">
+      <span class="brand-mark" aria-hidden="true">WC</span>
+      <span class="brand-text">Wild Cheese</span>
+    </a>
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      aria-label="Abrir menu de navegacion"
+      data-nav-toggle
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Navegacion principal" data-site-nav>
+      <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="registro.html">Registro</a></li>
         <li><a href="reglas.html">Reglas</a></li>
@@ -13,4 +29,3 @@
     </nav>
   </div>
 </header>
-<script src="assets/js/menu.js" defer></script>
