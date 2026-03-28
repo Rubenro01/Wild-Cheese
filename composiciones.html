@@ -1,100 +1,192 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Wild Cheese</title>
-    <link rel=stylesheet href="src/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f172a">
+    <meta
+        name="description"
+        content="Consulta las composiciones tematicas del torneo Wild Cheese y la estrategia base de cada una."
+    >
+    <title>Wild Cheese | Composiciones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Sora:wght@500;600;700;800&amp;display=swap"
+        rel="stylesheet"
+    >
+    <link rel="icon" type="image/svg+xml" href="src/favicon.svg">
+    <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-    <header>
-        <h1>Wild Cheese</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="registro.html">Registro</a></li>
-                <li><a href="reglas.html">Reglas</a></li>
-                <li><a href="composiciones.html">Composiciones</a></li>
-                <li><a href="resultados.html">Resultados</a></li>
-            </ul>
-        </nav>
+    <a href="#main-content" class="skip-link">Ir al contenido principal</a>
+
+    <header class="site-header">
+        <div class="page-shell nav-shell">
+            <a class="brand" href="index.html" aria-label="Volver al inicio de Wild Cheese">
+                <span class="brand-mark" aria-hidden="true">WC</span>
+                <span class="brand-text">Wild Cheese</span>
+            </a>
+
+            <button
+                class="nav-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="site-nav"
+                aria-label="Abrir menu de navegacion"
+                data-nav-toggle
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="site-nav" aria-label="Navegacion principal" data-site-nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="registro.html">Registro</a></li>
+                    <li><a href="reglas.html">Reglas</a></li>
+                    <li><a href="composiciones.html" class="is-active" aria-current="page">Composiciones</a></li>
+                    <li><a href="resultados.html">Resultados</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <section>
-        <article>
-            <h3>Ambulancia</h3>
-            <img src="img/ambulancia.jpeg" alt="ambulancia"/>
-            <p>Janna, Nami, Seraphine, Sona, Senna</p>
-            <p>Estrategia: Este equipo está diseñado para proporcionar un gran apoyo y curación. Deberían centrarse en mantener a sus aliados con vida y utilizar su potencial de curación para mantener la ventaja en peleas prolongadas.</p>
-        </article>
-        <article>
-            <h3>AOE (Área de Efecto)</h3>
-            <img src="img/aoe.jpeg" alt="aoe"/>
-            <p>Amumu, Malphite, Orianna, Seraphine, Vex</p>
-            <p>Estrategia: Con campeones con habilidades de área de efecto, este equipo debería buscar peleas en grupos y aprovechar su capacidad para dañar a varios oponentes al mismo tiempo. La coordinación en equipo es clave.</p>
-        </article>
-        <article>
-            <h3>Arcane</h3>
-            <img src="img/arcane.jpeg" alt="arcane"/>
-            <p>Caitlyn, Janna, Jayce, Jinx, Singed</p>
-            <p>Estrategia: Con campeones versátiles, este equipo tiene opciones tanto de daño a distancia como de combate cercano. Deberían adaptarse a la situación del juego y jugar de manera estratégica en función de sus oponentes.</p>
-        </article>
-        <article>
-            <h3>Colosos</h3>
-            <img src="img/colosos.jpeg" alt="colosos"/>
-            <p>Galio, Malphite, Nautilus, Ornn, Volibear</p>
-            <p>Estrategia: Este equipo tiene campeones altamente resistentes y tanques. Deberían ser los iniciadores de peleas y absorber el daño del equipo contrario, permitiendo que sus aliados hagan daño de manera segura.</p>
-        </article>
-        <article>
-            <h3>El Apoyo</h3>
-            <img src="img/elapoyo.jpeg" alt="elapoyo"/>
-            <p>Karma, Lux, Nautilus, Senna, Seraphine</p>
-            <p>Estrategia: Este equipo está diseñado para el apoyo y el control de masas. Deberían proteger a sus aliados y controlar el flujo de la batalla con sus habilidades de control de multitudes.</p>
-        </article>
-        <article>
-            <h3>Globals</h3>
-            <img src="img/globals.jpeg" alt="globals"/>
-            <p>Ezreal, Lux, Pantheon, Shen, Twisted Fate</p>
-            <p>Estrategia: Con habilidades de largo alcance y movilidad, este equipo podría enfocarse en el juego de mapa y asegurarse de estar presentes en todas partes del campo de batalla. La coordinación y la comunicación son esenciales.</p>
-        </article>
-        <article>
-            <h3>Halloween</h3>
-            <img src="img/halloween.jpeg" alt="halloween"/>
-            <p>Fiddlesticks, Hecarim, Swain, Varus, Vladimir</p>
-            <p>Estrategia: Este equipo tiene una mezcla de daño mágico y físico. Deberían aprovechar la sorpresa y la diversidad de sus campeones para mantener a sus oponentes fuera de balance.</p>
-        </article>
-        <article>
-            <h3>Hide on Bush</h3>
-            <img src="img/hideonbush.jpeg" alt="hideonbush"/>
-            <p>Ashe, Blitzcrank, Nautilus, Pyke, Thresh</p>
-            <p>Estrategia: Con un fuerte enfoque en el gancho y el control, este equipo debería buscar emboscadas en los arbustos y atrapar a sus oponentes en situaciones desventajosas.</p>
-        </article>
-        <article>
-            <h3>Invisibles</h3>
-            <img src="img/invisibles.jpeg" alt="invisibles"/>
-            <p>Evelynn, Kha'Zix, Pyke, Teemo, Twitch</p>
-            <p>Estrategia: Con campeones invisibles, este equipo podría aprovechar su capacidad de sigilo para acechar y eliminar a los oponentes desprevenidos.</p>
-        </article>
-        <article>
-            <h3>San Valentín</h3>
-            <img src="img/sanvalentin.jpeg" alt="sanvalentin"/>
-            <p>Amumu, Lucian, Rakan, Senna, Xayah</p>
-            <p>Estrategia: Este equipo tiene una combinación de campeones de daño físico y apoyo. Deberían centrarse en proteger a sus tiradores y asegurarse de que estén en una posición segura para infligir daño.</p>
-        </article>
-        <article>
-            <h3>Tutorial</h3>
-            <img src="img/tutorial.jpeg" alt="tutorial"/>
-            <p>Ahri, Ashe, Garen, Lux, Master Yi</p>
-            <p>Estrategia: Este equipo tiene campeones tradicionales en su composición. Deberían centrarse en la sinergia de equipo y aprovechar sus fortalezas en diferentes etapas del juego.</p>
-        </article>
-        <article>
-            <h3>Yordlandia</h3>
-            <img src="img/yordlandia.jpeg" alt="yordlandia"/>
-            <p>Amumu, Lulu, Teemo, Tristana, Veigar</p>
-            <p>Estrategia: Este equipo tiene una composición temática de Yordles. Deberían aprovechar la movilidad y la sorpresa de los Yordles para superar a sus oponentes con habilidades únicas y trampas.</p>
-        </article>
-    </section>
-    <footer>
-        <p>Derechos de autor © 2023 Torneo de equipos</p>
+
+    <main id="main-content">
+        <section class="page-shell page-hero page-hero--simple">
+            <div class="hero-copy">
+                <p class="eyebrow">Composiciones</p>
+                <h1>Doce maneras de romper el plan habitual de una partida.</h1>
+                <p class="lead">
+                    Cada composicion obliga a cambiar prioridades, adaptarte a tu equipo y encontrar sinergias raras.
+                    Aqui las tienes recogidas con mejor lectura y una estrategia base para cada una.
+                </p>
+            </div>
+        </section>
+
+        <section class="page-shell section-shell composition-grid">
+            <article class="composition-card">
+                <img src="img/ambulancia.jpeg" alt="Arte tematico de la composicion Ambulancia" width="1600" height="900" loading="lazy" decoding="async">
+                <div class="composition-copy">
+                    <p class="composition-label">Janna, Nami, Seraphine, Sona, Senna</p>
+                    <h2>Ambulancia</h2>
+                    <p>Mucho sustain y apoyo. La clave es sobrevivir a peleas largas, desgastar y negar el burst rival.</p>
+                </div>
+            </article>
+
+            <article class="composition-card">
+                <img src="img/aoe.jpeg" alt="Arte tematico de la composicion AOE" width="1600" height="900" loading="lazy" decoding="async">
+                <div class="composition-copy">
+                    <p class="composition-label">Amumu, Malphite, Orianna, Seraphine, Vex</p>
+                    <h2>AOE</h2>
+                    <p>Composicion de wombo combo. Busca peleas agrupadas y sincroniza definitivas para borrar al rival.</p>
+                </div>
+            </article>
+
+            <article class="composition-card">
+                <img src="img/arcane.jpeg" alt="Arte tematico de la composicion Arcane" width="1600" height="900" loading="lazy" decoding="async">
+                <div class="composition-copy">
+                    <p class="composition-label">Caitlyn, Janna, Jayce, Jinx, Singed</p>
+                    <h2>Arcane</h2>
+                    <p>Una mezcla versatil de poke, disengage y pelea frontal. Gana valor cuando el equipo se adapta bien.</p>
+                </div>
+            </article>
+
+            <article class="composition-card">
+                <img src="img/colosos.jpeg" alt="Arte tematico de la composicion Colosos" width="1600" height="900" loading="lazy" decoding="async">
+                <div class="composition-copy">
+                    <p class="composition-label">Galio, Malphite, Nautilus, Ornn, Volibear</p>
+                    <h2>Colosos</h2>
+                    <p>Engage, aguante y caos. Esta composicion funciona mejor cuando marca el ritmo y absorbe recursos.</p>
+                </div>
+            </article>
+
+            <article class="composition-card">
+                <img src="img/elapoyo.jpeg" alt="Arte tematico de la composicion El Apoyo" width="1600" height="900" loading="lazy" decoding="async">
+                <div class="composition-copy">
+                    <p class="composition-label">Karma, Lux, Nautilus, Senna, Seraphine</p>
+                    <h2>El Apoyo</h2>
+                    <p>Control de masas, escudos y utility. Protege a tus piezas claves y fuerza peleas en tus tiempos.</p>
+                </div>
+            </article>
+
+            <article class="composition-card">
+                <img src="img/globals.jpeg" alt="Arte tematico de la composicion Globals" width="1600" height="900" loading="lazy" decoding="async">
+                <div class="composition-copy">
+                    <p class="composition-label">Ezreal, Lux, Pantheon, Shen, Twisted Fate</p>
+                    <h2>Globals</h2>
+                    <p>Presencia constante por el mapa. La coordinacion decide si esta composicion parece brillante o caotica.</p>
+                </div>
+            </article>
+
+            <article class="composition-card">
+                <img src="img/halloween.jpeg" alt="Arte tematico de la composicion Halloween" width="1600" height="900" loading="lazy" decoding="async">
+                <div class="composition-copy">
+                    <p class="composition-label">Fiddlesticks, Hecarim, Swain, Varus, Vladimir</p>
+                    <h2>Halloween</h2>
+                    <p>Una composicion para entrar por sorpresa y castigar agrupaciones. El miedo es parte del plan.</p>
+                </div>
+            </article>
+
+            <article class="composition-card">
+                <img src="img/hideonbush.jpeg" alt="Arte tematico de la composicion Hide on Bush" width="1600" height="900" loading="lazy" decoding="async">
+                <div class="composition-copy">
+                    <p class="composition-label">Ashe, Blitzcrank, Nautilus, Pyke, Thresh</p>
+                    <h2>Hide on Bush</h2>
+                    <p>Hooks, vision y emboscadas. Si el rival camina sin respeto, esta composicion castiga cada error.</p>
+                </div>
+            </article>
+
+            <article class="composition-card">
+                <img src="img/invisibles.jpeg" alt="Arte tematico de la composicion Invisibles" width="1600" height="900" loading="lazy" decoding="async">
+                <div class="composition-copy">
+                    <p class="composition-label">Evelynn, Kha'Zix, Pyke, Teemo, Twitch</p>
+                    <h2>Invisibles</h2>
+                    <p>Sigilo, trampas y picks rapidos. Ideal para desordenar el mapa y hacer que nadie se sienta seguro.</p>
+                </div>
+            </article>
+
+            <article class="composition-card">
+                <img src="img/sanvalentin.jpeg" alt="Arte tematico de la composicion San Valentin" width="1600" height="900" loading="lazy" decoding="async">
+                <div class="composition-copy">
+                    <p class="composition-label">Amumu, Lucian, Rakan, Senna, Xayah</p>
+                    <h2>San Valentin</h2>
+                    <p>Combina engage y tiradores para jugar alrededor del posicionamiento. Mejor cuanto mas orden tenga el backline.</p>
+                </div>
+            </article>
+
+            <article class="composition-card">
+                <img src="img/tutorial.jpeg" alt="Arte tematico de la composicion Tutorial" width="1600" height="900" loading="lazy" decoding="async">
+                <div class="composition-copy">
+                    <p class="composition-label">Ahri, Ashe, Garen, Lux, Master Yi</p>
+                    <h2>Tutorial</h2>
+                    <p>Campeones muy reconocibles y una lectura sencilla. Su fuerza esta en ejecutar bien lo basico.</p>
+                </div>
+            </article>
+
+            <article class="composition-card">
+                <img src="img/yordlandia.jpeg" alt="Arte tematico de la composicion Yordlandia" width="1600" height="900" loading="lazy" decoding="async">
+                <div class="composition-copy">
+                    <p class="composition-label">Amumu, Lulu, Teemo, Tristana, Veigar</p>
+                    <h2>Yordlandia</h2>
+                    <p>Movilidad, control y caos creativo. Funciona mejor cuando aprovecha espacios cerrados y trampas.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page-shell footer-shell">
+            <p>Wild Cheese es un torneo de Wild Rift con equipos sorteados y composiciones tematicas.</p>
+            <p>Comunidad y coordinacion por Discord. &copy; <span data-year></span> Wild Cheese.</p>
+        </div>
     </footer>
+
+    <button class="scroll-top" type="button" aria-label="Volver arriba" aria-hidden="true" data-scroll-top>
+        Subir
+    </button>
+
+    <script src="src/js/main.js" defer></script>
 </body>
 </html>

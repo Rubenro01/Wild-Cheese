@@ -1,53 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Wild Cheese</title>
-    <link rel=stylesheet href="src/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f172a">
+    <meta
+        name="description"
+        content="Consulta el cuadro del torneo Wild Cheese, el formato de eliminatorias y los premios."
+    >
+    <title>Wild Cheese | Resultados</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Sora:wght@500;600;700;800&amp;display=swap"
+        rel="stylesheet"
+    >
+    <link rel="icon" type="image/svg+xml" href="src/favicon.svg">
+    <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-    <header>
-        <h1>Wild Cheese</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="registro.html">Registro</a></li>
-                <li><a href="reglas.html">Reglas</a></li>
-                <li><a href="composiciones.html">Composiciones</a></li>
-                <li><a href="resultados.html">Resultados</a></li>
-            </ul>
-        </nav>
+    <a href="#main-content" class="skip-link">Ir al contenido principal</a>
+
+    <header class="site-header">
+        <div class="page-shell nav-shell">
+            <a class="brand" href="index.html" aria-label="Volver al inicio de Wild Cheese">
+                <span class="brand-mark" aria-hidden="true">WC</span>
+                <span class="brand-text">Wild Cheese</span>
+            </a>
+
+            <button
+                class="nav-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="site-nav"
+                aria-label="Abrir menu de navegacion"
+                data-nav-toggle
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="site-nav" aria-label="Navegacion principal" data-site-nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="registro.html">Registro</a></li>
+                    <li><a href="reglas.html">Reglas</a></li>
+                    <li><a href="composiciones.html">Composiciones</a></li>
+                    <li><a href="resultados.html" class="is-active" aria-current="page">Resultados</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <p>Bienvenido a Wild Cheese. Aquí podrás ver una previsualización del torneo.</p>
-        <section>
-            <article>
-                <h3>Cuadro de torneo</h3>
-                <img src="img/enfrentamientos.jpeg" alt="enfrentamientos"/>
-                <h4>Día 1</h4>
-                <p>Equipo 1 vs Equipo 2
-                <br>Equipo 3 vs Equipo 4
+
+    <main id="main-content">
+        <section class="page-shell page-hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Resultados y Cuadro</p>
+                <h1>Una vista mas clara del bracket y de lo que se juega en cada dia.</h1>
+                <p class="lead">
+                    Esta pagina recoge la previsualizacion del torneo y su formato por jornadas para que cualquier jugador
+                    o espectador entienda rapido como avanza la competicion.
                 </p>
-                <h4>Día 2</h4>
-                <p>Equipo 5 vs Equipo 6
-                <br>Equipo 7 vs Equipo 8
-                </p>
-                <h4>Día 3</h4>
-                <p>Vencedor 1-2 vs Vencedor 3-4
-                <br>Vencedor 4-5 vs Vencedor 6-7
-                </p>
-                <h4>Día 4</h4>
-                <p>Vencedor 1-2-3-4 vs Vencedor 4-5-6-7
-                </p>
+            </div>
+
+            <div class="hero-media hero-media--square">
+                <img
+                    src="img/enfrentamientos.jpeg"
+                    alt="Cuadro orientativo de enfrentamientos del torneo Wild Cheese"
+                    width="1080"
+                    height="1080"
+                >
+            </div>
+        </section>
+
+        <section class="page-shell section-shell timeline-grid">
+            <article class="timeline-day">
+                <span class="step-number">Dia 1</span>
+                <h2>Cuartos iniciales</h2>
+                <p>Equipo A vs. Equipo B</p>
+                <p>Equipo C vs. Equipo D</p>
             </article>
-            <article>
-                <h3>Premios</h3>
-                <img src="img/premios.jpeg" alt="premios"/>
+
+            <article class="timeline-day">
+                <span class="step-number">Dia 2</span>
+                <h2>Cuartos restantes</h2>
+                <p>Equipo E vs. Equipo F</p>
+                <p>Equipo G vs. Equipo H</p>
             </article>
+
+            <article class="timeline-day">
+                <span class="step-number">Dia 3</span>
+                <h2>Semifinales</h2>
+                <p>Ganador A/B vs. Ganador C/D</p>
+                <p>Ganador E/F vs. Ganador G/H</p>
+            </article>
+
+            <article class="timeline-day">
+                <span class="step-number">Dia 4</span>
+                <h2>Gran final</h2>
+                <p>Ganador semifinal 1 vs. Ganador semifinal 2</p>
+                <p>Serie final al mejor de tres.</p>
+            </article>
+        </section>
+
+        <section class="page-shell section-shell split-section" id="premios">
+            <div>
+                <p class="eyebrow">Premios</p>
+                <h2>La recompensa sigue siendo simple y clara.</h2>
+                <p class="support-copy">
+                    Segun las reglas publicadas, el equipo ganador recibe un pase salvaje por jugador. El objetivo aqui
+                    era dejar visible esa informacion sin obligar a buscarla entre varios textos.
+                </p>
+            </div>
+
+            <div class="media-panel">
+                <img src="img/premios.jpeg" alt="Imagen promocional de los premios del torneo" width="1600" height="900" loading="lazy" decoding="async">
+            </div>
+        </section>
     </main>
-    <footer>
-        <p>Derechos de autor © 2023 Torneo de equipos</p>
+
+    <footer class="site-footer">
+        <div class="page-shell footer-shell">
+            <p>Wild Cheese es un torneo de Wild Rift con equipos sorteados y composiciones tematicas.</p>
+            <p>Comunidad y coordinacion por Discord. &copy; <span data-year></span> Wild Cheese.</p>
+        </div>
     </footer>
+
+    <button class="scroll-top" type="button" aria-label="Volver arriba" aria-hidden="true" data-scroll-top>
+        Subir
+    </button>
+
+    <script src="src/js/main.js" defer></script>
 </body>
 </html>

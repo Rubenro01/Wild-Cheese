@@ -1,87 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Wild Cheese</title>
-    <link rel=stylesheet href="src/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f172a">
+    <meta
+        name="description"
+        content="Consulta el estado de inscripcion del torneo Wild Cheese y accede a la lista de espera."
+    >
+    <title>Wild Cheese | Registro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Sora:wght@500;600;700;800&amp;display=swap"
+        rel="stylesheet"
+    >
+    <link rel="icon" type="image/svg+xml" href="src/favicon.svg">
+    <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-    <header>
-        <h1>Wild Cheese</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="registro.html">Registro</a></li>
-                <li><a href="reglas.html">Reglas</a></li>
-                <li><a href="composiciones.html">Composiciones</a></li>
-                <li><a href="resultados.html">Resultados</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div>
-            <p>Bienvenido a Wild Cheese. ¡Regístrate ahora para participar!</p>
-            <p>Actualmente todas las plazas están cubiertas, gracias por interesarte.</p>
-            <p>Actualmente todas las plazas están cubiertas, gracias por interesarte.</p>
-            <p>Actualmente todas las plazas están cubiertas, gracias por interesarte.</p>
-            <p>Actualmente todas las plazas están cubiertas, gracias por interesarte.</p>
-            <img src="img/bienvenida.jpeg" alt="bienvenida"/>
+    <a href="#main-content" class="skip-link">Ir al contenido principal</a>
 
+    <header class="site-header">
+        <div class="page-shell nav-shell">
+            <a class="brand" href="index.html" aria-label="Volver al inicio de Wild Cheese">
+                <span class="brand-mark" aria-hidden="true">WC</span>
+                <span class="brand-text">Wild Cheese</span>
+            </a>
+
+            <button
+                class="nav-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="site-nav"
+                aria-label="Abrir menu de navegacion"
+                data-nav-toggle
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="site-nav" aria-label="Navegacion principal" data-site-nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="registro.html" class="is-active" aria-current="page">Registro</a></li>
+                    <li><a href="reglas.html">Reglas</a></li>
+                    <li><a href="composiciones.html">Composiciones</a></li>
+                    <li><a href="resultados.html">Resultados</a></li>
+                </ul>
+            </nav>
         </div>
-       
-       <!-- <form action="https://formsubmit.co/rubengaymer1@gmail.com" method="POST">
+    </header>
 
-            <fieldset>
-                <legend>Rellene su inscripción</legend>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre"><br>
-            
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email"><br>
-            
-                <label for="ID del juego">ID del juego:</label>
-                <input id="ID del juego" name="ID del juego"><br>
-            
-                <label for="ID de discord">ID de discord:</label>
-                <input id="ID de discord" name="ID de discord"><br>
-            
-                <label for="Elo pick">Elo pick:</label>
-                <input id="Elo pick" name="Elo pick"><br>
-            
-                <label for="Elo actual">Elo actual</label>
-                <input id="Elo actual" name="Elo actual"><br>
-            
-                <label for="RolPpal">Selecciona tu rol principal:</label>
-                <select id="RolPpal" name="RolPpal"><br>
-                    <option value="TopP">Top</option>
-                    <option value="JunglaP">Jungla</option>
-                    <option value="MidP">Mid</option>
-                    <option value="ADCP">ADC</option>
-                    <option value="SupportP">Support</option>
-                </select><br>
-            
-                <label for="RolSec">Selecciona tu rol secundario:</label>
-                <select id="RolSec" name="RolSec"><br>
-                    <option value="Ninguno">Ninguno</option>
-                    <option value="TopS">Top</option>
-                    <option value="JunglaS">Jungla</option>
-                    <option value="MidS">Mid</option>
-                    <option value="ADCS">ADC</option>
-                    <option value="SupportS">Support</option>
-                </select><br>
-                
-            
-            
-            
-                <input type="submit" value="Enviar">
-                <input type="hidden" name="_captcha" value="false">
+    <main id="main-content">
+        <section class="page-shell page-hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Registro</p>
+                <h1>Las plazas publicadas estan cubiertas por ahora.</h1>
+                <p class="lead">
+                    La ultima convocatoria ya completo sus huecos, pero hemos dejado una pagina mas clara para que puedas
+                    seguir el estado del torneo, leer las reglas y entrar en lista de espera si quieres apuntarte a la
+                    siguiente edicion.
+                </p>
+                <div class="hero-actions">
+                    <a href="enviar.html" class="button button-primary">Entrar en lista de espera</a>
+                    <a href="reglas.html" class="button button-secondary">Revisar reglas</a>
+                </div>
+            </div>
 
-            </fieldset>
-        </form> -->
+            <div class="hero-media">
+                <img
+                    src="img/bienvenida.jpeg"
+                    alt="Imagen promocional del torneo Wild Cheese"
+                    width="1600"
+                    height="900"
+                >
+            </div>
+        </section>
+
+        <section class="page-shell section-shell split-section">
+            <div>
+                <p class="eyebrow">Antes De Apuntarte</p>
+                <h2>Deja todo preparado para cuando se abra la siguiente ronda.</h2>
+                <p class="support-copy">
+                    Si el torneo vuelve a abrir plazas, te ayudara tener lista tu informacion basica y saber como funciona
+                    el formato.
+                </p>
+            </div>
+
+            <ol class="check-list">
+                <li>Lee las reglas para entender el sorteo de equipos y las composiciones aleatorias.</li>
+                <li>Ten a mano tu ID del juego, tu usuario de Discord y tus roles principal y secundario.</li>
+                <li>Usa la lista de espera para dejar constancia de interes y estar preparado para la proxima edicion.</li>
+            </ol>
+        </section>
+
+        <section class="page-shell section-shell utility-band">
+            <div>
+                <p class="eyebrow">Comunidad</p>
+                <h2>El canal de coordinacion sigue siendo Discord.</h2>
+                <p class="support-copy">
+                    Para enterarte de novedades o resolver dudas, puedes seguir el servidor de la comunidad de Wild Rift
+                    y revisar tambien las paginas de reglas y resultados.
+                </p>
+            </div>
+
+            <ul class="feature-list">
+                <li>
+                    <a href="https://discord.com/invite/lolwildriftes" target="_blank" rel="noreferrer">
+                        Abrir el Discord de la comunidad.
+                    </a>
+                </li>
+                <li>
+                    <a href="composiciones.html">Ver todas las composiciones disponibles.</a>
+                </li>
+                <li>
+                    <a href="resultados.html">Consultar el cuadro y el formato del torneo.</a>
+                </li>
+            </ul>
+        </section>
     </main>
-    <footer>
-        <p>Derechos de autor © 2023 Torneo de equipos</p>
+
+    <footer class="site-footer">
+        <div class="page-shell footer-shell">
+            <p>Wild Cheese es un torneo de Wild Rift con equipos sorteados y composiciones tematicas.</p>
+            <p>Comunidad y coordinacion por Discord. &copy; <span data-year></span> Wild Cheese.</p>
+        </div>
     </footer>
+
+    <button class="scroll-top" type="button" aria-label="Volver arriba" aria-hidden="true" data-scroll-top>
+        Subir
+    </button>
+
+    <script src="src/js/main.js" defer></script>
 </body>
 </html>

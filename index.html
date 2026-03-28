@@ -1,59 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Wild Cheese</title>
-    <link rel="stylesheet" href="src/style.css">
-    <meta name="theme-color" content="#FF8C00">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f172a">
+    <meta
+        name="description"
+        content="Wild Cheese es un torneo tematico de Wild Rift con partidas 5v5, equipos sorteados y composiciones aleatorias."
+    >
+    <title>Wild Cheese | Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Sora:wght@500;600;700;800&amp;display=swap"
+        rel="stylesheet"
+    >
     <link rel="icon" type="image/svg+xml" href="src/favicon.svg">
-    <meta name="description" content="Torneo de equipos Wild Cheese: participa, consulta reglas, composiciones y resultados. ¡Únete a la comunidad!">
+    <link rel="stylesheet" href="src/style.css">
 </head>
-<body>
+<body class="page-home">
     <a href="#main-content" class="skip-link">Ir al contenido principal</a>
-    <header>
-        <h1>Wild Cheese</h1>
-        <nav aria-label="Navegación principal">
-            <ul>
-                <li><a href="index.html" class="active" aria-current="page">Inicio</a></li>
-                <li><a href="registro.html">Registro</a></li>
-                <li><a href="reglas.html">Reglas</a></li>
-                <li><a href="composiciones.html">Composiciones</a></li>
-                <li><a href="resultados.html">Resultados</a></li>
-            </ul>
-        </nav>
+
+    <header class="site-header">
+        <div class="page-shell nav-shell">
+            <a class="brand" href="index.html" aria-label="Volver al inicio de Wild Cheese">
+                <span class="brand-mark" aria-hidden="true">WC</span>
+                <span class="brand-text">Wild Cheese</span>
+            </a>
+
+            <button
+                class="nav-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="site-nav"
+                aria-label="Abrir menu de navegacion"
+                data-nav-toggle
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="site-nav" aria-label="Navegacion principal" data-site-nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="is-active" aria-current="page">Inicio</a></li>
+                    <li><a href="registro.html">Registro</a></li>
+                    <li><a href="reglas.html">Reglas</a></li>
+                    <li><a href="composiciones.html">Composiciones</a></li>
+                    <li><a href="resultados.html">Resultados</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main id="main-content">
-        <section class="bienvenida">
-            <div>
-                <img src="img/bienvenida.jpeg" alt="Imagen de bienvenida al torneo Wild Cheese" loading="lazy">
+        <section class="home-hero">
+            <div class="page-shell hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Torneo Wild Rift 5v5</p>
+                    <h1>Composiciones caoticas, equipos al azar y partidas para disfrutar compitiendo.</h1>
+                    <p class="lead">
+                        Wild Cheese mezcla estrategia, improvisacion y comunidad en un formato hecho para salir de la
+                        rutina. Aqui puedes consultar el estado del torneo, revisar las reglas y preparar la composicion
+                        que te toque.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="registro.html" class="button button-primary">Ver estado de inscripcion</a>
+                        <a href="composiciones.html" class="button button-secondary">Explorar composiciones</a>
+                    </div>
+                    <ul class="hero-meta" aria-label="Datos clave del torneo">
+                        <li>Partidas 5v5</li>
+                        <li>Formato BO3</li>
+                        <li>Composiciones sorpresa</li>
+                    </ul>
+                </div>
+
+                <div class="hero-media">
+                    <img
+                        src="img/encabezado.jpeg"
+                        alt="Arte promocional del torneo Wild Cheese"
+                        width="1600"
+                        height="900"
+                        fetchpriority="high"
+                    >
+                </div>
             </div>
-            <h2>¡Bienvenido/a a Wild Cheese!</h2>
-            <p>Wild Cheese es el torneo de equipos más divertido y competitivo. Participa, conoce las reglas, consulta composiciones y sigue los resultados en tiempo real. ¡Forma parte de nuestra comunidad y vive la experiencia!</p>
-            <a href="registro.html" class="boton-principal" aria-label="Registrarse en el torneo">Registrarse</a>
         </section>
-        <section class="novedades" aria-label="Novedades">
-            <h3>Últimas novedades</h3>
-            <ul>
-                <li>¡Inscripciones abiertas para la nueva edición 2025!</li>
-                <li>Consulta las <a href="reglas.html">reglas actualizadas</a> y los <a href="premios.html">premios</a>.</li>
-                <li>Revisa las <a href="composiciones.html">composiciones de equipos</a> y los <a href="resultados.html">resultados</a> en tiempo real.</li>
+
+        <section class="page-shell section-shell split-section">
+            <div class="section-heading">
+                <p class="eyebrow">Como Funciona</p>
+                <h2>Un torneo pensado para obligarte a adaptarte en equipo.</h2>
+            </div>
+
+            <div class="steps-grid">
+                <article class="step-block">
+                    <span class="step-number">01</span>
+                    <h3>Se sortean los equipos</h3>
+                    <p>La gracia del evento empieza antes de la partida: los rosters se forman al azar para mezclar estilos y jugadores.</p>
+                </article>
+
+                <article class="step-block">
+                    <span class="step-number">02</span>
+                    <h3>Recibes una composicion tematica</h3>
+                    <p>Cada cruce puede cambiar por completo tu plan. Hay composiciones de control, engage, poke, sigilo y mas.</p>
+                </article>
+
+                <article class="step-block">
+                    <span class="step-number">03</span>
+                    <h3>Compites y ajustas sobre la marcha</h3>
+                    <p>Los campeones son obligatorios, pero la posicion, la build y la ejecucion dependen de la comunicacion del equipo.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="page-shell section-shell utility-band">
+            <div>
+                <p class="eyebrow">Consulta Rapida</p>
+                <h2>Todo lo importante, sin buscar entre paginas sueltas.</h2>
+                <p class="support-copy">
+                    Hemos reorganizado el sitio para que las reglas, las composiciones y el cuadro del torneo se entiendan
+                    mucho mejor en movil y escritorio.
+                </p>
+            </div>
+
+            <ul class="feature-list">
+                <li>
+                    <a href="reglas.html">Leer las reglas oficiales y descargar el PDF.</a>
+                </li>
+                <li>
+                    <a href="composiciones.html">Repasar las composiciones antes de cada ronda.</a>
+                </li>
+                <li>
+                    <a href="resultados.html#premios">Seguir el cuadro del torneo y revisar los premios.</a>
+                </li>
             </ul>
         </section>
-        <button id="ir-arriba" aria-label="Ir arriba" title="Ir arriba">↑</button>
     </main>
-    <footer>
-        <p>Derechos de autor © 2023-2025 Torneo de equipos Wild Cheese</p>
+
+    <footer class="site-footer">
+        <div class="page-shell footer-shell">
+            <p>Wild Cheese es un torneo de Wild Rift con equipos sorteados y composiciones tematicas.</p>
+            <p>Comunidad y coordinacion por Discord. &copy; <span data-year></span> Wild Cheese.</p>
+        </div>
     </footer>
-    <script defer>
-    // Botón Ir arriba
-    const btnArriba = document.getElementById('ir-arriba');
-    window.addEventListener('scroll', () => {
-        btnArriba.style.display = window.scrollY > 200 ? 'block' : 'none';
-    });
-    btnArriba.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    </script>
+
+    <button class="scroll-top" type="button" aria-label="Volver arriba" aria-hidden="true" data-scroll-top>
+        Subir
+    </button>
+
+    <script src="src/js/main.js" defer></script>
 </body>
 </html>
